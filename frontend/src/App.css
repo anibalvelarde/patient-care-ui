@@ -1,0 +1,67 @@
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 35s linear;
+  }
+  .sidebar {
+    transform: none;
+    position: relative;
+  }
+  .navbar-toggler-icon {
+    display: none;
+  }  
+}
+
+.app-header {
+  width: 100%;
+}
+
+.app-body {
+  display: flex;
+  height: calc(100vh - 50px); /* Adjust 50px to the height of your header */
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f0f0f0;
+  position:relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.closed {
+  transform: translateX(-100%);
+}
+
+.content-area {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.active {
+  color: red;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
