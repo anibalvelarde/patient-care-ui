@@ -9,12 +9,14 @@ import CaretakerRegistration from './components/CaretakerRegistration';
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="App">
-        <header className="App-header">
-          <h1>Patient Care App</h1>
-        </header>
-        <div className="app-body">
+      <header className="row">
+        <h2 className='col-12'>Patient Care App</h2>
+      </header>
+      <div className="row">
+        <div className='col-md-3'>
           <Sidebar />
+        </div>
+        <div className='col-md-9'>
           <div className="content-area">
             <Routes>
               <Route path="/caretaker" element={<CaretakerRegistration />} />
