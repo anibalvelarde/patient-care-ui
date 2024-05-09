@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+// src/App.tsx
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
+import logo from './logo.svg';
+import Sidebar from './components/navigation/Sidebar';
+import CaretakerRegistration from './components/CaretakerRegistration';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <h1>Patient Care App</h1>
+        </header>
+        <div className="app-body">
+          <Sidebar />
+          <div className="content-area">
+            <Routes>
+              <Route path="/caretaker" element={<CaretakerRegistration />} />
+              <Route path="/" element={<img src={logo} className="App-logo" alt="logo" />} />
+            </Routes>
+          </div>
+        </div>
+      </div>
+    </Router>
   );
 }
 

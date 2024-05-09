@@ -1,0 +1,17 @@
+.formLabel {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+.formInput {
+    margin-top: 5px;
+    padding: 8px;
+    width: calc(100% - 16px);
+    box-sizing: border-box;
+  }
+  
+.formError {
+    color: red;
+    font-size: 12px;
+  }
+  

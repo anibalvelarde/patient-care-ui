@@ -15,13 +15,39 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.app-body {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.content-area {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.active {
+  color: red;
+}
+
+.App-logo {
+  width: 500px;
+  height: auto;
 }
 
 .App-link {
